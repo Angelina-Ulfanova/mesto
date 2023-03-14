@@ -1,0 +1,13 @@
+.profile__form_edit-button {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-width: 0;
+    background-color: black;
+    margin-left: 18px;
+    align-self: flex-end;
+}
+
+.profile__form_edit-button:hover {
+    opacity: 75%;
+}

@@ -1,0 +1,17 @@
+.popup__form_text {
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
+    width: 358px;
+    height: 27px;    
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 610px) {
+    .popup__form_text {
+        width: 238px;
+    }
+}

@@ -1,0 +1,8 @@
+.element__group_like {
+    align-self: center;
+    margin-right: 21px;
+}
+
+.element__group_like:hover {
+    opacity: 75%;
+}
