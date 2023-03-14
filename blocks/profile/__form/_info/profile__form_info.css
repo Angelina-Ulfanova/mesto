@@ -1,11 +1,11 @@
 .profile__form_info {
     display: flex;
-    justify-content: space-between;   
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 800px) {
     .profile__form_info {
         justify-content: flex-end;
-        padding-right: 18px; 
+        padding-right: 18px;
     }
 }
