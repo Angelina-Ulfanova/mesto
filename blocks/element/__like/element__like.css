@@ -1,8 +1,8 @@
-.element__group_like {
+.element__like {
     align-self: center;
     margin-right: 21px;
 }
 
-.element__group_like:hover {
+.element__like:hover {
     opacity: 75%;
 }

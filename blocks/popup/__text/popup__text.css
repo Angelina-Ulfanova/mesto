@@ -1,4 +1,4 @@
-.popup__form_text {
+.popup__text {
     font-family: "Inter", "Arial", sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -11,7 +11,7 @@
 }
 
 @media screen and (max-width: 610px) {
-    .popup__form_text {
+    .popup__text {
         width: 238px;
     }
 }
