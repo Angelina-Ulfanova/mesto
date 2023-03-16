@@ -26,8 +26,7 @@ popupCloseButtonElement.addEventListener("click", closePopup);
 function handleFormSubmit (evt) {
         evt.preventDefault();
         formName.textContent = nameInput.value;
-        formJob.textContent = jobInput.value;      
-
+        formJob.textContent = jobInput.value;
         popupSaveButtonElement.addEventListener("click", closePopup);  ///закрытие попапа
         }
 
