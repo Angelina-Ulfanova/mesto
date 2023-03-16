@@ -9,3 +9,9 @@
         padding-right: 18px;
     }
 }
+
+@media screen and (max-width: 610px) {
+    .profile__info {
+        padding-right: 25px;
+    }
+}

@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
   <link rel="stylesheet" href="./pages/index.css">
-  <link rel="stylesheet" href="./vendor/fonts.css">
-  <link rel="stylesheet" href="./vendor/normalize.css">
-
 
   <title>Mesto</title>
+
 </head>
 
 <body class="body">
@@ -18,33 +15,21 @@
   <div class="page">
   
     <header class="header">
-      <img class="header__logo" src="./images/logo.png" alt="Логотип">
+      <img class="header__logo" src="./images/logo.svg" alt="Логотип">
     </header>
 
     <main class="content">
 
-       <section class="popup">
-        <div class="popup__container">
-          <button class="popup__close" type="submit"><img class="popup__img-button" src="./images/close.png" alt="Закрыть"></button>
-          <form class="popup__form" action="#">
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <input class="popup__text popup__name" type="text" id="name" minlength="2" maxlength="20">
-            <input class="popup__text popup__job" type="text" id="job" minlength="2" maxlength="20">
-            <button class="popup__button" type="submit">Сохранить</button>
-          </form>
-        </div>
-      </section>
-
       <section class="profile">
         <img class="profile__image" src="./images/custo.jpg" alt="Кусто">
-        <form class="profile__form" action="#">
+        <div class="profile__form" action="#">
           <div class="profile__info">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="submit"><img class="profile__img-button" src="./images/edit_button.png" alt="Редактировать"></button>
+            <button class="profile__edit-button" type="button" aria-label="Изменить"><img class="profile__img-button" src="./images/edit_button.png" alt="Редактировать"></button>
           </div>
           <p class="profile__subtitle">Исследователь океана</p>
-        </form>
-        <button class="profile__add-button" type="submit"><img class="profile__img-button" src="./images/plus.png" alt="Добавить"></button>
+        </div>
+        <button class="profile__add-button" type="button" aria-label="Добавить"><img class="profile__img-button" src="./images/plus.png" alt="Добавить"></button>
       </section>
 
       <section class="elements">
@@ -96,6 +81,18 @@
     <footer class="footer">
       <p class="footer__text">© 2023 Mesto Russia</p>
     </footer>
+
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label="Закрыть"><img class="popup__img-button" src="./images/close.png" alt="Закрыть"></button>
+        <form class="popup__form" action="#" name="popupform" method="post">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input class="popup__text" type="text" id="name" name="popupname" placeholder="Имя">
+          <input class="popup__text" type="text" id="job" name="popupjob" placeholder="О себе">
+          <button class="popup__button" type="submit" aria-label="Сохранить">Сохранить</button>
+        </form>
+      </div>
+    </div>
 
   </div>
 
