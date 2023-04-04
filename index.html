@@ -40,14 +40,14 @@
       <p class="footer__text">© 2023 Mesto Russia</p>
     </footer>
 
-    <div class="popup">
-      <div class="popup__container">
-        <button class="popup__close" type="button" aria-label="Закрыть"><img class="popup__img-button" src="./images/close.png" alt="Закрыть"></button>
-        <form class="popup__form" action="#" name="popupform" method="post">
-          <h2 class="popup__title">Редактировать профиль</h2>
-          <input class="popup__text" type="text" id="name" name="popupname" placeholder="Имя">
-          <input class="popup__text" type="text" id="job" name="popupjob" placeholder="О себе">
-          <button class="popup__button" type="submit" aria-label="Сохранить">Сохранить</button>
+    <div class="popup popup_profile">
+      <div class="popup__container popup__container_profile">
+        <button class="popup__close popup__close_profile" type="button" aria-label="Закрыть"><img class="popup__img-button popup__img-button_profile" src="./images/close.png" alt="Закрыть"></button>
+        <form class="popup__form popup__form_profile" action="#" name="popupform" method="post">
+          <h2 class="popup__title popup__title_profile">Редактировать профиль</h2>
+          <input class="popup__text popup__text_profile" type="text" id="name" name="popupname" placeholder="Имя">
+          <input class="popup__text popup__text_profile" type="text" id="job" name="popupjob" placeholder="О себе">
+          <button class="popup__button popup__button_profile" type="submit" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
@@ -58,7 +58,7 @@
         <form class="popup__form popup__form_element_add" action="#" name="popupform" method="post">
           <h2 class="popup__title popup__title_element_add">Новое место</h2>
           <input class="popup__text popup__text_element_add" type="text" id="title" name="popupname" placeholder="Название">
-          <input class="popup__text popup__text_element_add" type="url" id="image" src="#" alt="Место" placeholder="Ссылка на картинку">
+          <input class="popup__text popup__text_element_add" type="url" id="image" src="#" alt="#" placeholder="Ссылка на картинку">
           <button class="popup__button popup__button_element_add" type="submit" aria-label="Создать">Создать</button>
         </form>
       </div>
