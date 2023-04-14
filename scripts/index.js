@@ -21,10 +21,12 @@ const popupCloseButton = document.querySelectorAll(".popup__close");
 const popupImageTitle = popupImage.querySelector(".popup__title_image");
 const popupImagePhoto = popupImage.querySelector(".popup__photo_image");
 const allPopup = document.querySelectorAll(".popup");
+const popupButtonAdd = document.querySelector(".popup__button_element_add");
 
 
 function openPopup(popup) {
         popup.classList.add("popup_opened");
+        document.addEventListener("keydown", closePopupEsc);
 };
 
 // открытие попапа профиля
@@ -39,12 +41,15 @@ popupOpenButtonElement.addEventListener("click", openPopupProfile);
 // открытие попапа добавления картинки
 const openPopupAdd = function () {
         openPopup(popupElementAdd);
+        // деактивация кнопки, если инпуты пустые
+        disableButton(popupButtonAdd, enableValidation);
 };
 
 popupAddElementButton.addEventListener("click", openPopupAdd);
 
 function closePopup(popup) {
         popup.classList.remove("popup_opened");
+        document.removeEventListener("keydown", closePopupEsc);
 };
 
 //универсальный обработчик крестиков
@@ -65,13 +70,11 @@ allPopup.forEach((overlay) => {
 
 //функция закрытия попапа на Esc
 function closePopupEsc(evt) {
+        const popupOpened = document.querySelector(".popup_opened");
         if (evt.key === "Escape") {
-                const popupOpened = document.querySelector(".popup_opened");
                 closePopup(popupOpened);
         };
 };
-
-document.addEventListener("keydown", closePopupEsc);
 
 function handleFormSubmit(evt) {
         evt.preventDefault();
