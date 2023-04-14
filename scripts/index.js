@@ -20,6 +20,8 @@ const popupCloseImageButton = document.querySelector(".popup__close_image");
 const popupCloseButton = document.querySelectorAll(".popup__close");
 const popupImageTitle = popupImage.querySelector(".popup__title_image");
 const popupImagePhoto = popupImage.querySelector(".popup__photo_image");
+const allPopup = document.querySelectorAll(".popup");
+
 
 function openPopup(popup) {
         popup.classList.add("popup_opened");
@@ -47,9 +49,29 @@ function closePopup(popup) {
 
 //универсальный обработчик крестиков
 popupCloseButton.forEach((button) => {
-        const popup = button.closest('.popup');
-        button.addEventListener('click', () => closePopup(popup));
+        const popup = button.closest(".popup");
+        button.addEventListener("click", () => closePopup(popup));
 });
+
+//закрытие попапов кликом на overlay
+allPopup.forEach((overlay) => {
+        const popup = overlay.closest(".popup");
+        overlay.addEventListener("click", (evt) => {
+                if (evt.target === evt.currentTarget) {
+                        closePopup(popup);
+                };
+        });
+});
+
+//функция закрытия попапа на Esc
+function closePopupEsc(evt) {
+        if (evt.key === "Escape") {
+                const popupOpened = document.querySelector(".popup_opened");
+                closePopup(popupOpened);
+        };
+};
+
+document.addEventListener("keydown", closePopupEsc);
 
 function handleFormSubmit(evt) {
         evt.preventDefault();
@@ -116,9 +138,6 @@ function createCard(item) {
 };
 
 function openPopupImage(item) {
-        // popupImage.querySelector(".popup__photo_image").src = item.link;
-        // popupImage.querySelector(".popup__photo_image").alt = item.name;
-        // popupImage.querySelector(".popup__title_image").textContent = item.name;
         popupImagePhoto.src = item.link;
         popupImagePhoto.alt = item.name;
         popupImageTitle.textContent = item.name;
@@ -138,3 +157,4 @@ function handleFormSubmitAdd(evt) {
 };
 
 popupFormAdd.addEventListener("submit", handleFormSubmitAdd);
+

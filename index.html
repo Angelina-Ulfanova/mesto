@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,9 @@
 </head>
 
 <body class="body">
-  
+
   <div class="page">
-  
+
     <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="Логотип">
     </header>
@@ -25,11 +26,13 @@
         <div class="profile__form">
           <div class="profile__info">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button" aria-label="Изменить"><img class="profile__img-button" src="./images/edit_button.png" alt="Редактировать"></button>
+            <button class="profile__edit-button" type="button" aria-label="Изменить"><img class="profile__img-button"
+                src="./images/edit_button.png" alt="Редактировать"></button>
           </div>
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button" aria-label="Добавить"><img class="profile__img-button" src="./images/plus.png" alt="Добавить"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить"><img class="profile__img-button"
+            src="./images/plus.png" alt="Добавить"></button>
       </section>
 
       <section class="elements"></section>
@@ -42,11 +45,16 @@
 
     <div class="popup popup_profile">
       <div class="popup__container popup__container_profile">
-        <button class="popup__close popup__close_profile" type="button" aria-label="Закрыть"><img class="popup__img-button popup__img-button_profile" src="./images/close.png" alt="Закрыть"></button>
+        <button class="popup__close popup__close_profile" type="button" aria-label="Закрыть"><img
+            class="popup__img-button popup__img-button_profile" src="./images/close.png" alt="Закрыть"></button>
         <form class="popup__form popup__form_profile" action="#" name="popupform" method="post">
           <h2 class="popup__title popup__title_profile">Редактировать профиль</h2>
-          <input class="popup__text popup__text_profile" type="text" id="name" name="popupname" placeholder="Имя">
-          <input class="popup__text popup__text_profile" type="text" id="job" name="popupjob" placeholder="О себе">
+          <input class="popup__text popup__text_profile" type="text" id="name" name="popupname" placeholder="Имя"
+            minlength="2" maxlength="40" required>
+          <span id="name-error" class="error"></span>
+          <input class="popup__text popup__text_profile" type="text" id="job" name="popupjob" placeholder="О себе"
+            minlength="2" maxlength="200" required>
+          <span id="job-error" class="error"></span>
           <button class="popup__button popup__button_profile" type="submit" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
@@ -54,11 +62,16 @@
 
     <div class="popup popup_element_add">
       <div class="popup__container popup__container_element_add">
-        <button class="popup__close popup__close_element_add" type="button" aria-label="Закрыть"><img class="popup__img-button popup__img-button_element_add" src="./images/close.png" alt="Закрыть"></button>
+        <button class="popup__close popup__close_element_add" type="button" aria-label="Закрыть"><img
+            class="popup__img-button popup__img-button_element_add" src="./images/close.png" alt="Закрыть"></button>
         <form class="popup__form popup__form_element_add" action="#" name="popupform" method="post">
           <h2 class="popup__title popup__title_element_add">Новое место</h2>
-          <input class="popup__text popup__text_element_add" type="text" id="title" name="popupname" placeholder="Название">
-          <input class="popup__text popup__text_element_add" type="url" id="image" src="#" alt="#" placeholder="Ссылка на картинку">
+          <input class="popup__text popup__text_element_add" type="text" id="title" name="popupname"
+            placeholder="Название" minlength="2" maxlength="30" required>
+          <span id="title-error" class="error"></span>
+          <input class="popup__text popup__text_element_add" type="url" id="image" src="#" alt="#"
+            placeholder="Ссылка на картинку" required>
+          <span id="image-error" class="error"></span>
           <button class="popup__button popup__button_element_add" type="submit" aria-label="Создать">Создать</button>
         </form>
       </div>
@@ -66,16 +79,18 @@
 
     <div class="popup popup_image">
       <div class="popup__container popup__container_image">
-        <button class="popup__close popup__close_image" type="button" aria-label="Закрыть"><img class="popup__img-button popup__img-button_image" src="./images/close.png" alt="Закрыть"></button> 
-          <img src="#" alt="#" class="popup__photo popup__photo_image">
-          <h2 class="popup__title popup__title_image"></h2>
+        <button class="popup__close popup__close_image" type="button" aria-label="Закрыть"><img
+            class="popup__img-button popup__img-button_image" src="./images/close.png" alt="Закрыть"></button>
+        <img src="#" alt="#" class="popup__photo popup__photo_image">
+        <h2 class="popup__title popup__title_image"></h2>
       </div>
     </div>
 
     <template class="template">
       <div class="element">
         <img src="#" alt="Картинка" class="element__img">
-        <button class="element__trash" type="button" aria-label="Корзина"><img src="./images/trash.png" alt="Корзина" class="element__img-trash"></button>
+        <button class="element__trash" type="button" aria-label="Корзина"><img src="./images/trash.png" alt="Корзина"
+            class="element__img-trash"></button>
         <div class="element__group">
           <h2 class="element__title"></h2>
           <button class="element__like" type="button" aria-label="Лайк"></button>
@@ -85,9 +100,11 @@
 
   </div>
 
-  <script src="./scripts/index.js"></script>
+
+  <script src="./scripts/validate.js" defer></script>
+  <script src="./scripts/index.js" defer></script>
+
 
 </body>
 
 </html>
-
