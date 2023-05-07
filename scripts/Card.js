@@ -22,6 +22,7 @@ export default class Card {
       // удаление карточек
       this._deleteElement.addEventListener("click", this._clearElement = () => {
       this._cardsElement.remove();
+      this._cardsElement = null;
       });
   
       // открытие попапа с картинкой

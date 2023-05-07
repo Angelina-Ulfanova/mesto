@@ -5,9 +5,9 @@
     line-height: 14.52px;
     width: 358px;
     height: 12px;
-    margin-top: 5px;
     color: red;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    display: block;
 }
