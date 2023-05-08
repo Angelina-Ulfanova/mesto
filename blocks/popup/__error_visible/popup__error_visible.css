@@ -7,7 +7,5 @@
     height: 0;
     color: red;
     text-overflow: ellipsis;
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
     display: block;
 }
